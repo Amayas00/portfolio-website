@@ -39,7 +39,7 @@ export const Hero = () => {
           alt="Hero image"
           className="w-full h-full object-cover opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
+        <div className="absolute inset-0 bg-linear-to-b from-background/20 via-background/80 to-background" />
       </div>
 
       {/* Green Dots */}
@@ -96,18 +96,20 @@ export const Hero = () => {
               <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                 Me contacter <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Télécharger CV
-              </AnimatedBorderButton>
+              <a href="/cv.pdf" download>
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Télécharger CV
+                </AnimatedBorderButton>
+              </a>
             </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Retrouvez-moi : </span>
               {[
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Linkedin, href: "https://linkedin.com/in/Amayas.Sadji", label: "LinkedIn" },
+                { icon: Github, href: "https://github.com/Amayas00", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/amayas-sadji-191401354/", label: "LinkedIn" },
               ].map((social, idx) => (
                 <a
                   key={idx}
@@ -127,7 +129,7 @@ export const Hero = () => {
             <div className="relative max-w-md mx-auto">
               <div
                 className="absolute inset-0 
-              rounded-3xl bg-gradient-to-br 
+              rounded-3xl bg-linear-to-br 
               from-primary/30 via-transparent 
               to-primary/10 blur-2xl animate-pulse"
               />
@@ -135,7 +137,7 @@ export const Hero = () => {
                 <img
                   src="/profile-photo.jpg"
                   alt="Amayas SADJI"
-                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                  className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
 
                 {/* Floating Badge */}
@@ -148,12 +150,6 @@ export const Hero = () => {
                   </div>
                 </div>
                 {/* Stats Badge */}
-                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">14.58</div>
-                  <div className="text-xs text-muted-foreground">
-                    Moy. S1 / 20
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -167,15 +163,15 @@ export const Hero = () => {
           <div className="relative overflow-hidden">
             <div
               className="absolute left-0 top-0 bottom-0 w-32
-             bg-gradient-to-r from-background to-transparent z-10"
+             bg-linear-to-r from-background to-transparent z-10"
             />
             <div
               className="absolute right-0 top-0 bottom-0 w-32
-             bg-gradient-to-l from-background to-transparent z-10"
+             bg-linear-to-l from-background to-transparent z-10"
             />
             <div className="flex animate-marquee">
               {[...skills, ...skills].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                <div key={idx} className="shrink-0 px-8 py-4">
                   <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
                     {skill}
                   </span>

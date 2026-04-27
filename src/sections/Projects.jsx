@@ -3,11 +3,11 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 const projects = [
   {
-    title: "Gestion de parc de scooters",
+    title: "TalentFlow - Plateforme ATS de Gestion de Candidatures",
     description:
-      "Application Java complète de gestion de réservations de scooters. Modélisation UML (classes, cas d'utilisation, séquence), architecture MVC, gestion des disponibilités via collections Java et interfaces graphiques avec Java Swing.",
+      "Développement d'une plateforme de suivi de candidatures (ATS) permettant la gestion complète du pipeline de recrutement. Conception de l'architecture de données, implémentation des fonctionnalités CRUD, et création d'une interface intuitive pour le suivi des candidats à chaque étape du processus.",
     image: "/projects/project1.png",
-    tags: ["Java", "Java Swing", "MVC", "UML"],
+    tags: ["Django", "API Github"],
     link: "#",
     github: "#",
   },
@@ -21,11 +21,11 @@ const projects = [
     github: "#",
   },
   {
-    title: "Interface de vérification d'inputs",
+    title: "Bomberman - Jeu Multijoueur",
     description:
-      "Application Java implémentant un algorithme avancé de validation d'entrées utilisateur. Gestion robuste des erreurs et mode explicatif pas-à-pas pour visualiser le processus de validation.",
+      "Recréation du jeu classique Bomberman avec gestion des collisions, logique de déplacement en temps réel et système d'explosions en chaîne. Implémentation de la boucle de jeu, gestion des états (vie, score, niveaux) et conception d'une interface de jeu fluide et responsive.",
     image: "/projects/project3.png",
-    tags: ["Java", "Algorithmes", "Validation"],
+    tags: ["Java", "Multijoueur", "MVC"],
     link: "#",
     github: "#",
   },
@@ -75,7 +75,7 @@ export const Projects = () => {
                 />
                 <div
                   className="absolute inset-0 
-                bg-gradient-to-t from-card via-card/50
+                bg-linear-to-t from-card via-card/50
                  to-transparent opacity-60"
                 />
                 {/* Overlay Links */}
